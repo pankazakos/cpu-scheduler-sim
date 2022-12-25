@@ -8,7 +8,7 @@ run:
 	./simulator $(ARGS)
 
 valgrind:
-	valgrind ./simulator $(ARGS)
+	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose ./simulator $(ARGS)
 
 gdb:
 	gdb ./simulator $(ARGS)
